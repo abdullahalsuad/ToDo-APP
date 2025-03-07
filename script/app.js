@@ -40,4 +40,21 @@ function main() {
     // Save updated task list to localStorage
     saveTasksToLocalStorage();
   });
+
+  // get the user name
+  const userName = localStorage.getItem("userName");
+  if (userName) {
+    document.getElementById("user-name").innerText = userName;
+  } else {
+    window.location.href = "../index.html";
+  }
+
+  // Handle logout button
+  const logoutBtn = document.getElementById("logout-btn");
+  if (logoutBtn) {
+    logoutBtn.addEventListener("click", function () {
+      localStorage.clear();
+      window.location.href = "../index.html";
+    });
+  }
 }
