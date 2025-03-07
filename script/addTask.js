@@ -11,11 +11,6 @@ function addTask(container, inputTaskValue, isCompleted = false) {
     "items-center"
   );
 
-  if (isCompleted) {
-    task.classList.remove("bg-white");
-    task.classList.add("bg-green-200");
-  }
-
   task.innerHTML = `
     <div>
       <h1>${inputTaskValue}</h1>
@@ -37,8 +32,13 @@ function addTask(container, inputTaskValue, isCompleted = false) {
       </button>
     </div>
   `;
-
   container.appendChild(task);
+
+  //completed task
+  if (isCompleted) {
+    task.classList.remove("bg-white");
+    task.classList.add("bg-green-200");
+  }
 
   let deleteBtn = task.querySelector("#delete-task");
   let editBtn = task.querySelector("#edit-task");

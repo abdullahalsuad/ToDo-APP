@@ -9,8 +9,8 @@ function main() {
   let runningTime = document.getElementById("running-time");
   let greeting = document.getElementById("greeting");
 
-  let addTaskBtn = document.getElementById("add-task");
   let inputTask = document.getElementById("task-input");
+  let addTaskBtn = document.getElementById("add-task");
 
   let taskContainer = document.getElementById("task-list-container");
 
@@ -51,10 +51,8 @@ function main() {
 
   // Handle logout button
   const logoutBtn = document.getElementById("logout-btn");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", function () {
-      localStorage.clear();
-      window.location.href = "../index.html";
-    });
-  }
+  logoutBtn.addEventListener("click", function () {
+    localStorage.clear();
+    window.location.href = "../index.html";
+  });
 }
