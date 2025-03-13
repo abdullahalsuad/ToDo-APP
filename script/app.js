@@ -27,7 +27,7 @@ function main() {
 
     let inputTaskValue = inputTask.value;
     if (inputTaskValue === "") {
-      alert("Mama Type Koro Kichu !!");
+      alert("Mama Blank  keno !!");
       return;
     }
 
